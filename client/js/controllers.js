@@ -3,10 +3,11 @@
 var controllers = angular.module('myBlogApp.controllers', []);
 
 controllers.controller('listPostsController', ['$scope', 'myFactory', function ($scope, myFactory) {
-    console.log("test");
-    myFactory.test();
-    
     $scope.posts = myFactory.getAllPosts();
+    
+    $scope.viewSinglePost = function(id) {
+        console.log(id);
+    };
   
 }]);
 
