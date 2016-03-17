@@ -10,7 +10,7 @@ app.factory('myFactory', ['$resource', function($resource) {
     }
     
     f.getAllPosts = function() {
-        var resource = $resource('/api/posts/:id');
+        var resource = $resource('/api/posts/');
         return resource.query(function(data) {
             return data;
         });
@@ -22,6 +22,15 @@ app.factory('myFactory', ['$resource', function($resource) {
         var param = {};
         param.id = id;
         return resource.get(param, function(data) {
+            return data;
+        });
+        
+    }
+    
+    f.createPost = function(post) {
+        var resource = $resource('/api/posts/');
+        var param = post;
+        return resource.save(param, function(data) {
             return data;
         });
         

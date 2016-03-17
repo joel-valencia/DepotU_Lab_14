@@ -18,7 +18,15 @@ controllers.controller('singlePostController', ['$scope', 'myFactory', '$routePa
     
 }]);
 
-controllers.controller('createPostController', ['$scope', function ($scope) {
+controllers.controller('createPostController', ['$scope', 'myFactory', function ($scope, myFactory) {
     
-    
+    $scope.send = function() {
+        var post = {}
+        post.title = $scope.title;
+        post.author = $scope.author;
+        post.content = $scope.content;
+        
+        console.log(post);
+        myFactory.createPost(post);
+    }
 }]);
