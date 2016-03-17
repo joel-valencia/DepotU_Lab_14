@@ -2,6 +2,7 @@
     <div class="post">
     <div>{{ post.title }}</div>
     <div>{{ post.author }}</div>
+    <div>{{ post.createdAt | date : 'medium' }}</div>
     <div>{{ post.content }}</div>
     </div>
 </div>
