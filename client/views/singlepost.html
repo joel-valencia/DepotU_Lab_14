@@ -1,8 +1,8 @@
 <div class="container">
     <div class="post">
-    <div>{{ post.title }}</div>
-    <div>{{ post.author }}</div>
-    <div>{{ post.createdAt | date : 'medium' }}</div>
-    <div>{{ post.content }}</div>
+    <h3>{{ post.title }}</h3>
+    <div class="author">By {{ post.author }}</div>
+    <div class="content">{{ post.content }}</div>
+    <div class="date">{{ post.createdAt | date : 'medium' }}</div>
     </div>
 </div>

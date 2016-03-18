@@ -26,7 +26,10 @@ controllers.controller('createPostController', ['$scope', 'myFactory', function 
         post.author = $scope.author;
         post.content = $scope.content;
         
-        console.log(post);
-        myFactory.createPost(post);
+        //console.log(post);
+        myFactory.createPost(post).$promise.then(function(result) {
+            $scope.result = "Posted!";
+        }
+        )
     }
 }]);

@@ -30,9 +30,7 @@ app.factory('myFactory', ['$resource', function($resource) {
     f.createPost = function(post) {
         var resource = $resource('/api/posts/');
         var param = post;
-        return resource.save(param, function(data) {
-            return data;
-        });
+        return resource.save(param);
         
     }
     
