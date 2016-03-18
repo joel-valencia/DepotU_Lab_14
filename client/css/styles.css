@@ -64,3 +64,14 @@ h3 {
 .nav a {
     margin-right: 20px;
 }
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
