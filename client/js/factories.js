@@ -5,15 +5,9 @@ var app = angular.module('myBlogApp.factories', ['ngResource']);
 app.factory('myFactory', ['$resource', function($resource) {
     var f = {};
     
-    f.test = function() {
-        console.log("factory works");
-    }
-    
     f.getAllPosts = function() {
         var resource = $resource('/api/posts/');
-        return resource.query(function(data) {
-            return data;
-        });
+        return resource.query();
         
     }
     
@@ -21,9 +15,7 @@ app.factory('myFactory', ['$resource', function($resource) {
         var resource = $resource('/api/posts/:id');
         var param = {};
         param.id = id;
-        return resource.get(param, function(data) {
-            return data;
-        });
+        return resource.get(param);
         
     }
     
@@ -40,7 +32,6 @@ app.factory('myFactory', ['$resource', function($resource) {
         });
         var param = {};
         param.id = id;
-        
         return resource.update(param, post);
     }
     
