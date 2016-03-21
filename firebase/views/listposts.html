@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="post" ng-repeat="post in posts | orderBy: '' : 'reverse'">
+        <h3 class="title">{{ post.title }}</h3>
+        <div class="author">By {{ post.author }}</div>
+        <a class="navButton" href="#/blog/{{ post.id }}">Read Post</a>
+        <div class="date">{{ post.createdAt | date : 'medium' }}</div>
+    </div>
+</div>
