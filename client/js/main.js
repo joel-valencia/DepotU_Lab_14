@@ -16,15 +16,15 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'views/createpost.html',
         controller: 'createPostController'
     })
-    .when('/edit', {
-        templateUrl: 'views/editpost.html',
-        controller: 'editPostController'
-    })
+    // .when('/edit', {
+    //     templateUrl: 'views/editpost.html',
+    //     controller: 'editPostController'
+    // })
     .when('/edit/:id', {
         templateUrl: 'views/editpost.html',
         controller: 'editPostController'
     })
-    // .otherwise({
-    //     redirectTo: '/blog'
-    // });
+    .otherwise({
+        redirectTo: '/blog'
+    });
 }]);
