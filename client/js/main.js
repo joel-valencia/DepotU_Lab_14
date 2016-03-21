@@ -15,7 +15,16 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/compose', {
         templateUrl: 'views/createpost.html',
         controller: 'createPostController'
-    }).otherwise({
-        redirectTo: '/blog'
-    });
+    })
+    .when('/edit', {
+        templateUrl: 'views/editpost.html',
+        controller: 'editPostController'
+    })
+    .when('/edit/:id', {
+        templateUrl: 'views/editpost.html',
+        controller: 'editPostController'
+    })
+    // .otherwise({
+    //     redirectTo: '/blog'
+    // });
 }]);

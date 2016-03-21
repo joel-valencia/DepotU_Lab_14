@@ -31,7 +31,17 @@ app.factory('myFactory', ['$resource', function($resource) {
         var resource = $resource('/api/posts/');
         var param = post;
         return resource.save(param);
+    }
+    
+    f.editPost = function(post, id) {
+        var resource = $resource('/api/posts/:id', null,
+        {
+            'update': { method:'PUT' }
+        });
+        var param = {};
+        param.id = id;
         
+        return resource.update(param, post);
     }
     
     return f;

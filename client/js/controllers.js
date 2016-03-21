@@ -29,7 +29,25 @@ controllers.controller('createPostController', ['$scope', 'myFactory', function 
         //console.log(post);
         myFactory.createPost(post).$promise.then(function(result) {
             $scope.result = "Posted!";
-        }
-        )
-    }
+        });
+    };
+}]);
+
+controllers.controller('editPostController', ['$scope', 'myFactory', '$routeParams', function ($scope, myFactory, $routeParams) {
+    var id = $routeParams.id;
+    //console.log(id);
+    
+    $scope.post = myFactory.getSinglePost(id);
+    
+    $scope.send = function() {
+        var post = {}
+        post.title = $scope.post.title;
+        post.author = $scope.post.author;
+        post.content = $scope.post.content;
+        
+        //console.log(post);
+        myFactory.editPost(post, id).$promise.then(function(result) {
+            $scope.result = "Edited!";
+        });
+    };
 }]);
