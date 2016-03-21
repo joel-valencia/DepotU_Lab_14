@@ -1,6 +1,7 @@
 <div class="container">
     <div class="post">
     <h3>{{ post.title }}</h3>
+    <div class="editPost"><a href="#/edit/{{ post.id }}">Edit</a></div>
     <div class="author">By {{ post.author }}</div>
     <div class="content">{{ post.content }}</div>
     <div class="date">{{ post.createdAt | date : 'medium' }}</div>

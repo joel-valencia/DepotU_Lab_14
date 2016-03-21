@@ -22,10 +22,12 @@ button {
 
 h3 {
     margin-top: 0px;
+    float: left;
 }
 
 .author {
     margin-bottom: 10px;
+    clear: left;
 }
 
 .navButton {
@@ -74,4 +76,8 @@ input {
 textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.editPost {
+    float: right;
 }
