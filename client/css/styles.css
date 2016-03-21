@@ -43,20 +43,20 @@ h3 {
     text-decoration: none;
 }
 
-.readPost:visited, .readPost:hover, .readPost:active {
+.navButton:visited, .navButton:hover, .navButton:active {
     text-decoration: none;
     color: white;
 }
 
 .content {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .date {
     color: #aaa;
     float: right;
     position: relative;
-    top: -10px;
+    top: -15px;
 }
 
 .nav {
